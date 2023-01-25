@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <title>Tabs</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              Home
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="track-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#track-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              Track
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cart-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cart-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="cart-tab-pane"
+              aria-selected="false"
+            >
+              Cart
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="my-number-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#my-number-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="my-number-tab-pane"
+              aria-selected="false"
+            >
+              My number
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="disabled-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-5-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="tab-5-tab-pane"
+              aria-selected="false"
+            >
+              My bet
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="disabled-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-6-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="tab-6-tab-pane"
+              aria-selected="false"
+            >
+              Shopping basket
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            new tab1
+          </div>
+          <div
+            class="tab-pane fade"
+            id="track-tab-pane"
+            role="tabpanel"
+            aria-labelledby="track-tab"
+            tabindex="0"
+          >
+            <div class="table-content">
+              <table class="table table-borderless" aria-describedby>
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Bets</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Multi</th>
+                    <th scope="col">Bet Amount</th>
+                    <th scope="col">Clear</th>
+                    <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>All 5 Group 120</td>
+                    <td>0 1 2 3 4 5 6 7 8 9</td>
+                    <td>252</td>
+                    <td>2</td>
+                    <td>
+                      <div class="row">
+                        <ul class="multibetCounter">
+                          <li
+                            data-btn-type="decrement"
+                            class="cart-decrement"
+                            id="decrement"
+                          >
+                            <span class="romoveBtn"
+                              ><i class="bi bi-dash"></i
+                            ></span>
+                          </li>
+
+                          <input
+                            class="input-multibet-counter"
+                            id="btnMultiBetCount"
+                            name="multiBetCount"
+                            type="text"
+                            value="X1"
+                          />
+                          <li
+                            data-btn-type="increment"
+                            id="increment"
+                            class="cart-increment"
+                          >
+                            <span class="romoveBtn"
+                              ><i class="bi bi-plus"></i
+                            ></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td><span class="currency">$</span>&nbsp;&nbsp;234</td>
+                    <td><span class="bi bi-trash3"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#chase-same-number-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="chase-same-number-tab-pane"
+                    aria-selected="true"
+                  >
+                    Chasing the same number
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#double-chase-number-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="double-chase-number-tab-pane"
+                    aria-selected="false"
+                  >
+                    Double chasing number
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="contact-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profit-margin-chase-number-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="profit-margin-chase-number-tab-pane"
+                    aria-selected="false"
+                  >
+                    Profit margin chasing number
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="chase-same-number-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                  tabindex="0"
+                >
+                  <div class="draw-and-multibet-container">
+                    <div class="first-multi-draws mb-3">
+                      <div
+                        class="first-draw-container d-inline-flex align-items-center"
+                      >
+                        <label for="first_draw" class="form-label"
+                          >First draw:&nbsp;&nbsp;
+                        </label>
+                        <select name="first_draw" class="form-select" id="">
+                          <option value="1234567">1234567</option>
+                          <option value="1234567">1234567</option>
+                          <option value="1234567">1234567</option>
+                          <option value="1234567">1234567</option>
+                          <option value="1234567">1234567</option>
+                        </select>
+                      </div>
+                      <!-- <div class="track-container">
+                        <label for="current_draw">Track draw: </label>
+                        <input type="text" class="current-draw" />draws (Maximum
+                        track 120 draws)
+                      </div> -->
+                      <div class="row">
+                        <label
+                          for="inputPassword"
+                          class="col-sm-3 col-form-label mr-n3"
+                          >Track draw:
+                        </label>
+                        <div class="col-sm-2">
+                          <input
+                            type="number"
+                            min="1"
+                            max="120"
+                            class="form-control"
+                            id="inputPassword"
+                          />
+                        </div>
+                        <label
+                          for="inputPassword"
+                          class="current-draw col-sm-7 col-form-label text-danger"
+                          >draws (Maximum track 120 draws)</label
+                        >
+                      </div>
+                      <div class="m-auto"></div>
+                    </div>
+                    <div class="first-multi-draws">
+                      <div class="mb-3 row">
+                        <label for="firstMulti" class="col-sm-4 col-form-label"
+                          >First Multi:
+                        </label>
+                        <div class="col-sm-4">
+                          <input
+                            type="number"
+                            min="1"
+                            class="form-control"
+                            id="firstMulti"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label
+                          for="inputPassword"
+                          class="col-sm-2 col-form-label"
+                          >Every:
+                        </label>
+                        <div class="col-sm-4">
+                          <input
+                            type="number"
+                            min="1"
+                            class="form-control"
+                            id="inputPassword"
+                          />
+                        </div>
+                        <label
+                          for="inputPassword"
+                          class="current-draw col-sm-2 col-form-label"
+                          >draw(s)</label
+                        >
+                      </div>
+                      <div class="mb-3 row">
+                        <label
+                          for="inputPassword"
+                          class="col-sm-2 col-form-label text-danger"
+                          >Multi x:
+                        </label>
+                        <div class="col-sm-2">
+                          <input
+                            type="number"
+                            min="1"
+                            class="form-control"
+                            id="inputPassword"
+                          />
+                        </div>
+                        <label
+                          for="inputPassword"
+                          class="current-draw col-sm-7 col-form-label text-danger"
+                          >Hint: each draw times 1 implies equal track</label
+                        >
+                      </div>
+                      <!-- <label for="first_draw" class="text-danger">Multi x: </label>
+                      <input type="text" class="current-draw" />
+                      <span class="text-danger"
+                        >Hint: each draw times 1 implies equal track</span
+                      > -->
+                    </div>
+                    <div class="card m-0">
+                      <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
+                      <div class="card-body m-0">
+                        <table class="table table-bordered" aria-describedby>
+                          <thead>
+                            <tr>
+                              <th scope="col">Current</th>
+                              <th scope="col">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  name="track_number"
+                                  id="track_number"
+                                />
+                                Track No.
+                              </th>
+                              <th scope="col">Multi.</th>
+                              <th scope="col">Bet Amount</th>
+                              <th scope="col">Estimate draw time</th>
+
+                              <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>All 5 Group 120</td>
+                              <td>
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  name="track_number"
+                                  id="track_number"
+                                />
+                                <span>20230125-188</span>
+                                <button class="btn-current btn btn-danger">
+                                  current
+                                </button>
+                              </td>
+                              <td
+                                class="d-flex justify-content-center align-content-center"
+                              >
+                                <div class="col-sm-3">
+                                  <input
+                                    type="number"
+                                    min="1"
+                                    class="form-control"
+                                    id="inputPassword"
+                                  />
+                                </div>
+                              </td>
+                              <td>2</td>
+                              <td>2023/1/25 12:00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="double-chase-number-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                  tabindex="0"
+                >
+                  double chase
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="profit-margin-chase-number-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                  tabindex="0"
+                >
+                  profit margin chase
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cart-tab-pane"
+            role="tabpanel"
+            aria-labelledby="cart-tab"
+            tabindex="0"
+          >
+            <div class="table-balance-container">
+              <div class="table-content">
+                <table class="table table-borderless" aria-describedby>
+                  <thead>
+                    <tr>
+                      <th scope="col">Type</th>
+                      <th scope="col">Detail</th>
+                      <th scope="col">Bets</th>
+                      <th scope="col">Unit</th>
+                      <th scope="col">Multi</th>
+                      <th scope="col">Bet Amount</th>
+                      <th scope="col">Clear</th>
+                      <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>All 5 Group 120</td>
+                      <td>0 1 2 3 4 5 6 7 8 9</td>
+                      <td>252</td>
+                      <td>2</td>
+                      <td>
+                        <div class="row">
+                          <ul class="multibetCounter">
+                            <li
+                              data-btn-type="decrement"
+                              class="cart-decrement"
+                              id="decrement"
+                            >
+                              <span class="romoveBtn"
+                                ><i class="bi bi-dash"></i
+                              ></span>
+                            </li>
+
+                            <input
+                              class="input-multibet-counter"
+                              id="btnMultiBetCount"
+                              name="multiBetCount"
+                              type="text"
+                              value="X1"
+                            />
+                            <li
+                              data-btn-type="increment"
+                              id="increment"
+                              class="cart-increment"
+                            >
+                              <span class="romoveBtn"
+                                ><i class="bi bi-plus"></i
+                              ></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><span class="currency">$</span>&nbsp;&nbsp;234</td>
+                      <td><span class="bi bi-trash3"></span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+
+                      <td><span class="bi bi-trash3"></span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                      <td>@twitter</td>
+                      <td>@twitter</td>
+                      <td><span class="bi bi-trash3"></span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                      <td>@twitter</td>
+                      <td>@</td>
+                      <td><span class="bi bi-trash3"></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="m-2"></div>
+              <div class="balance-content">
+                <table
+                  class="table table-responsive table-borderless"
+                  aria-describedby
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Balance <span class="mask-balance">333333</span
+                        ><span class="unmasked-balance visually-hidden"
+                          >******</span
+                        >
+                        &nbsp;<span class="bi bi-eye btn-mask-balance"></span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        <h5>Total <span class="total-bets">252</span> bets</h5>
+                        <h6>Total <span class="total-bets">504</span></h6>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>
+                        <button class="btn-track">Track</button>
+                        <button class="btn-bet-now">Bet Now</button>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="my-number-tab-pane"
+            role="tabpanel"
+            aria-labelledby="my-number-tab"
+            tabindex="0"
+          >
+            <table class="table table-borderless" aria-describedby>
+              <thead>
+                <tr>
+                  <th scope="col">Lottery name</th>
+                  <th scope="col">How to play</th>
+                  <th scope="col">Start period number</th>
+                  <th scope="col">Betting number</th>
+                  <th scope="col">Total chasing number amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Operation</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab-5-tab-pane"
+            role="tabpanel"
+            aria-labelledby="tab-5-tab"
+            tabindex="0"
+          >
+            <table class="table table-borderless" aria-describedby>
+              <thead>
+                <tr>
+                  <th scope="col">Lottery name</th>
+                  <th scope="col">Gameplay</th>
+                  <th scope="col">Issue number</th>
+                  <th scope="col">Betting content</th>
+                  <th scope="col">Betting amount</th>
+                  <th scope="col">Winning bonus</th>
+                  <th scope="col">Betting status</th>
+                  <th scope="col">Operation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab-6-tab-pane"
+            role="tabpanel"
+            aria-labelledby="tab-6-tab"
+            tabindex="0"
+          >
+            <table class="table table-borderless" aria-describedby>
+              <thead>
+                <tr>
+                  <th scope="col">How to play</th>
+                  <th scope="col">Betting content</th>
+                  <th scope="col">Start period number</th>
+                  <th scope="col">Number of bets</th>
+                  <th scope="col">Multiples</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Operation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let text = "Hello World!";
+
+      // Masking the text
+      let maskedText = text.replace(/./g, "*");
+      console.log(maskedText); // Output: "***********"
+
+      // Unmasking the text
+      let unmaskedText = maskedText.replace(/\*/g, "");
+      console.log(unmaskedText);
+    </script>
+    <script src="js.js"></script>
+  </body>
+</html>
