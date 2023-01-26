@@ -25,7 +25,6 @@ console.log("hello world");
   const mask_balance = document.querySelector(".mask-balance");
   const unmask_balance = document.querySelector(".unmasked-balance");
   let isMasked = false;
-console.log();
 
   button.addEventListener("click", function() {
     if (isMasked) {

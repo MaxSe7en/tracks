@@ -142,7 +142,6 @@
                     <th scope="col">Detail</th>
                     <th scope="col">Bets</th>
                     <th scope="col">Unit</th>
-                    <th scope="col">Multi</th>
                     <th scope="col">Bet Amount</th>
                     <th scope="col">Clear</th>
                     <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
@@ -155,44 +154,13 @@
                     <td>0 1 2 3 4 5 6 7 8 9</td>
                     <td>252</td>
                     <td>2</td>
-                    <td>
-                      <div class="row">
-                        <ul class="multibetCounter">
-                          <li
-                            data-btn-type="decrement"
-                            class="cart-decrement"
-                            id="decrement"
-                          >
-                            <span class="romoveBtn"
-                              ><i class="bi bi-dash"></i
-                            ></span>
-                          </li>
 
-                          <input
-                            class="input-multibet-counter"
-                            id="btnMultiBetCount"
-                            name="multiBetCount"
-                            type="text"
-                            value="X1"
-                          />
-                          <li
-                            data-btn-type="increment"
-                            id="increment"
-                            class="cart-increment"
-                          >
-                            <span class="romoveBtn"
-                              ><i class="bi bi-plus"></i
-                            ></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
                     <td><span class="currency">$</span>&nbsp;&nbsp;234</td>
                     <td><span class="bi bi-trash3"></span></td>
                   </tr>
                 </tbody>
               </table>
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <ul class="nav nav-tabs" id="trackTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link active"
@@ -236,7 +204,7 @@
                   </button>
                 </li>
               </ul>
-              <div class="tab-content" id="myTabContent">
+              <div class="tab-content" id="trackContent">
                 <div
                   class="tab-pane fade show active"
                   id="chase-same-number-tab-pane"
@@ -245,7 +213,7 @@
                   tabindex="0"
                 >
                   <div class="draw-and-multibet-container">
-                    <div class="first-multi-draws mb-3">
+                    <div class="first-multi-draws mb-3 ml-">
                       <div
                         class="first-draw-container d-inline-flex align-items-center"
                       >
@@ -351,59 +319,224 @@
                     <div class="card m-0">
                       <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
                       <div class="card-body m-0">
-                        <table class="table table-bordered" aria-describedby>
-                          <thead>
-                            <tr>
-                              <th scope="col">Current</th>
-                              <th scope="col">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  name="track_number"
-                                  id="track_number"
-                                />
-                                Track No.
-                              </th>
-                              <th scope="col">Multi.</th>
-                              <th scope="col">Bet Amount</th>
-                              <th scope="col">Estimate draw time</th>
-
-                              <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>All 5 Group 120</td>
-                              <td>
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  name="track_number"
-                                  id="track_number"
-                                />
-                                <span>20230125-188</span>
-                                <button class="btn-current btn btn-danger">
-                                  current
-                                </button>
-                              </td>
-                              <td
-                                class="d-flex justify-content-center align-content-center"
-                              >
-                                <div class="col-sm-3">
+                        <div class="table-responsive tableFixHead">
+                          <table class="table table-bordered" aria-describedby>
+                            <thead>
+                              <tr>
+                                <th scope="col">Current</th>
+                                <th scope="col">
                                   <input
-                                    type="number"
-                                    min="1"
-                                    class="form-control"
-                                    id="inputPassword"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="track_number"
+                                    id="track_number"
                                   />
-                                </div>
-                              </td>
-                              <td>2</td>
-                              <td>2023/1/25 12:00</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                                  Track No.
+                                </th>
+                                <th scope="col">Multi.</th>
+                                <th scope="col">Bet Amount</th>
+                                <th scope="col">Estimate draw time</th>
+
+                                <!-- <th scope="col" >Balance 2000<span class="bi bi-eye"></span>d</th> -->
+                              </tr>
+                            </thead>
+                            <tbody
+                              class="overflow-auto"
+                              style="max-height: 150px"
+                            >
+                              <tr>
+                                <td>All 5 Group 120</td>
+                                <td>
+                                  <ul
+                                    class="list-unstyled justify-content-between align-items-center g-2"
+                                  >
+                                    <li class="col-sm-2">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="track_number"
+                                        id="track_number"
+                                      />
+                                    </li>
+                                    <li class="col-sm-6">
+                                      <span>20230125-188</span>
+                                    </li>
+                                    <li class="col-sm-5">
+                                      <button
+                                        class="btn-current visually-hidde  btn-bet-now"
+                                      >
+                                        current
+                                      </button>
+                                    </li>
+                                  </ul>
+                                </td>
+                                <td
+                                  class="d-flex justify-content-center align-content-center"
+                                >
+                                  <div class="col-sm-3">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                </td>
+                                <td>2</td>
+                                <td>2023/1/25 12:00</td>
+                              </tr>
+                              <tr>
+                                <td>All 5 Group 120</td>
+                                <td>
+                                  <ul
+                                    class="list-unstyled justify-content-between align-items-center g-2"
+                                  >
+                                    <li class="col-sm-2">
+                                      <input
+                                        class="form-check-input col-sm-2"
+                                        type="checkbox"
+                                        name="track_number"
+                                        id="track_number"
+                                      />
+                                    </li>
+                                    <li class="col-sm-6">
+                                      <span>20230125-188</span>
+                                    </li>
+                                    <li class="col-sm-5">Item</li>
+                                  </ul>
+                                </td>
+                                <td
+                                  class="d-flex justify-content-center align-content-center"
+                                >
+                                  <div class="col-sm-3">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                </td>
+                                <td>2</td>
+                                <td>2023/1/25 12:00</td>
+                              </tr>
+                              <tr>
+                                <td>All 5 Group 120</td>
+                                <td>
+                                  <ul
+                                    class="list-unstyled justify-content-between align-items-center g-2"
+                                  >
+                                    <li class="col-sm-2">
+                                      <input
+                                        class="form-check-input col-sm-2"
+                                        type="checkbox"
+                                        name="track_number"
+                                        id="track_number"
+                                      />
+                                    </li>
+                                    <li class="col-sm-6">
+                                      <span>20230125-188</span>
+                                    </li>
+                                    <li class="col-sm-5">Item</li>
+                                  </ul>
+                                </td>
+                                <td
+                                  class="d-flex justify-content-center align-content-center"
+                                >
+                                  <div class="col-sm-3">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                </td>
+                                <td>2</td>
+                                <td>2023/1/25 12:00</td>
+                              </tr>
+                              <tr>
+                                <td>All 5 Group 120</td>
+                                <td>
+                                  <ul
+                                    class="list-unstyled justify-content-between align-items-center g-2"
+                                  >
+                                    <li class="col-sm-2">
+                                      <input
+                                        class="form-check-input col-sm-2"
+                                        type="checkbox"
+                                        name="track_number"
+                                        id="track_number"
+                                      />
+                                    </li>
+                                    <li class="col-sm-6">
+                                      <span>20230125-188</span>
+                                    </li>
+                                    <li class="col-sm-5">Item</li>
+                                  </ul>
+                                </td>
+                                <td
+                                  class="d-flex justify-content-center align-content-center"
+                                >
+                                  <div class="col-sm-3">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      class="form-control"
+                                      id="inputPassword"
+                                    />
+                                  </div>
+                                </td>
+                                <td>2</td>
+                                <td>2023/1/25 12:00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
+                      <div
+                        class="row justify-content-center align-items-center g-2 mb-4"
+                      >
+                        <div class="total__bar col-sm-5">
+                          <span class="track__total me-3">
+                            Total track
+                            <strong class="text-danger">10</strong> draw(s)
+                          </span>
+                          <span class="total__bets">
+                            Total.
+                            <strong class="text-danger">2345</strong> bet(s)
+                          </span>
+                        </div>
+                        <div class="total__track__bets col-sm-4">
+                          <span class="total__amount"
+                            >Total Amt.
+                            <strong class="text-danger">2345</strong></span
+                          >
+                        </div>
+                        <div class="total__amount__balance col-sm-3">
+                          <span class="total__balance"
+                            >Balance:
+                            <strong class="text-danger">2345</strong></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card p-4 mt-2 bg-light text-dark">
+                        <div class="d-flex justify-content-end align-content-center">
+                          <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Stop if win
+                            </label>
+                          </div>
+                          <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Stop if not win 
+                            </label>
+                          </div>
+                          <button type="button" class="btn-bet-now ms-3">Track Confirm</button>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -475,6 +608,7 @@
                               name="multiBetCount"
                               type="text"
                               value="X1"
+                              disabled
                             />
                             <li
                               data-btn-type="increment"
@@ -661,6 +795,25 @@
         </div>
       </div>
     </div>
+
+    <input type="checkbox" id="master" />Select All
+    <br />
+    <input type="checkbox" class="slave" />Option 1
+    <br />
+    <input type="checkbox" class="slave" />Option 2
+    <br />
+    <input type="checkbox" class="slave" />Option 3
+
+    <script>
+      const master = document.getElementById("master");
+      const slaves = document.querySelectorAll(".slave");
+
+      master.addEventListener("change", function () {
+        for (let slave of slaves) {
+          slave.checked = master.checked;
+        }
+      });
+    </script>
 
     <script>
       let text = "Hello World!";
