@@ -213,12 +213,12 @@
                   tabindex="0"
                 >
                   <div class="draw-and-multibet-container">
-                    <div class="first-multi-draws mb-3 ml-">
+                    <div class="first-multi-draws mb-3 ">
                       <div
                         class="first-draw-container d-inline-flex align-items-center"
                       >
-                        <label for="first_draw" class="form-label"
-                          >First draw:&nbsp;&nbsp;
+                        <label for="first_draw" class="form-label">
+                          First draw:&nbsp;&nbsp;
                         </label>
                         <select name="first_draw" class="form-select" id="">
                           <option value="1234567">1234567</option>
@@ -256,8 +256,8 @@
                       </div>
                       <div class="m-auto"></div>
                     </div>
-                    <div class="first-multi-draws">
-                      <div class="mb-3 row">
+                    <div class="first-multi-draws first-multi-draws-negative-margin mb-3">
+                      <div class=" row">
                         <label for="firstMulti" class="col-sm-4 col-form-label"
                           >First Multi:
                         </label>
@@ -270,7 +270,7 @@
                           />
                         </div>
                       </div>
-                      <div class="mb-3 row">
+                      <div class=" row">
                         <label
                           for="inputPassword"
                           class="col-sm-2 col-form-label"
@@ -290,7 +290,7 @@
                           >draw(s)</label
                         >
                       </div>
-                      <div class="mb-3 row">
+                      <div class=" row">
                         <label
                           for="inputPassword"
                           class="col-sm-2 col-form-label text-danger"
@@ -329,7 +329,7 @@
                                     class="form-check-input"
                                     type="checkbox"
                                     name="track_number"
-                                    id="track_number"
+                                    id="master"
                                   />
                                   Track No.
                                 </th>
@@ -352,7 +352,7 @@
                                   >
                                     <li class="col-sm-2">
                                       <input
-                                        class="form-check-input"
+                                        class="form-check-input slave"
                                         type="checkbox"
                                         name="track_number"
                                         id="track_number"
@@ -363,7 +363,7 @@
                                     </li>
                                     <li class="col-sm-5">
                                       <button
-                                        class="btn-current visually-hidde  btn-bet-now"
+                                        class="btn-current visually-hidde btn-bet-now"
                                       >
                                         current
                                       </button>
@@ -393,7 +393,7 @@
                                   >
                                     <li class="col-sm-2">
                                       <input
-                                        class="form-check-input col-sm-2"
+                                        class="form-check-input col-sm-2 slave"
                                         type="checkbox"
                                         name="track_number"
                                         id="track_number"
@@ -428,7 +428,7 @@
                                   >
                                     <li class="col-sm-2">
                                       <input
-                                        class="form-check-input col-sm-2"
+                                        class="form-check-input col-sm-2 slave"
                                         type="checkbox"
                                         name="track_number"
                                         id="track_number"
@@ -522,21 +522,42 @@
                       </div>
                     </div>
                     <div class="card p-4 mt-2 bg-light text-dark">
-                        <div class="d-flex justify-content-end align-content-center">
-                          <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              Stop if win
-                            </label>
-                          </div>
-                          <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              Stop if not win 
-                            </label>
-                          </div>
-                          <button type="button" class="btn-bet-now ms-3">Track Confirm</button>
+                      <div
+                        class="d-flex justify-content-end align-content-center"
+                      >
+                        <div class="form-check m-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Stop if win
+                          </label>
                         </div>
+                        <div class="form-check m-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            Stop if not win
+                          </label>
+                        </div>
+                        <button type="button" class="btn-bet-now ms-3">
+                          Track Confirm
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -796,35 +817,46 @@
       </div>
     </div>
 
-    <input type="checkbox" id="master" />Select All
+    <!-- <input type="checkbox" id="master" />Select All
     <br />
     <input type="checkbox" class="slave" />Option 1
     <br />
     <input type="checkbox" class="slave" />Option 2
     <br />
-    <input type="checkbox" class="slave" />Option 3
+    <input type="checkbox" class="slave" />Option 3 -->
 
     <script>
-      const master = document.getElementById("master");
-      const slaves = document.querySelectorAll(".slave");
+      // const master = document.getElementById("master");
+      // const slaves = document.querySelectorAll(".form-check-input");
 
-      master.addEventListener("change", function () {
-        for (let slave of slaves) {
-          slave.checked = master.checked;
-        }
-      });
+      // master.addEventListener("change", function () {
+      //   for (let slave of slaves) {
+      //     slave.checked = master.checked;
+      //   }
+      // });
     </script>
 
     <script>
       let text = "Hello World!";
-
+      let maskBtn = document.querySelector(".mask-balance").innerText;
+      let maskBtnContent = maskBtn;
       // Masking the text
-      let maskedText = text.replace(/./g, "*");
+      let maskedText = maskBtn.replace(/./g, "*");
       console.log(maskedText); // Output: "***********"
 
       // Unmasking the text
-      let unmaskedText = maskedText.replace(/\*/g, "");
+      let unmaskedText = maskedText.replace(/\*/g, maskBtnContent);
       console.log(unmaskedText);
+
+      //       let tbody = document.querySelector('table tbody');
+      //       console.log(tbody)
+      // let emptyMessage = document.querySelector('.empty-table-message');
+
+      // if (tbody.childElementCount === 0) {
+      //   // emptyMessage.style.display = 'block';
+      // } else {
+      //   emptyMessage.style.display = 'none';
+      // }
     </script>
     <script src="js.js"></script>
   </body>

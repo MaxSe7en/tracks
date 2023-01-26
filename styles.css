@@ -183,8 +183,8 @@ ul {
 }
 
 .btn-bet-now:hover {
-  background: #fa3600;
-  background-image: linear-gradient(to bottom, #fa3600, #f70000);
+  /* background: #fa3600; */
+  background-image: linear-gradient(to bottom, #e65b35, #f70000);
   text-decoration: none;
 }
 
@@ -234,7 +234,7 @@ ul.multibetCounter {
 
 .first-draw-container select {
     width: 200px;
-    color: #f70000;
+    /* color: #f70000; */
     padding: 0.5rem;
 }
 
@@ -301,6 +301,9 @@ ul.multibetCounter {
   width: 100%;
 }
 
-td{
+/* td{
   padding-top: 5rem;
+} */
+.first-multi-draws-negative-margin{
+  margin-left: -3.5rem;
 }

@@ -41,6 +41,16 @@ console.log("hello world");
   });
 
 
+  const master = document.getElementById("master");
+  const slaves = document.querySelectorAll(".slave");
+
+  console.log(master)
+  master.addEventListener("change", function () {
+    for (let slave of slaves) {
+      slave.checked = master.checked;
+    }
+  });
+
 // $(".guestCounter li").on("click", function (element) {
 //     let operationType = $(this).attr("data-btn-type");
 //     // let oldValue = $(this).parent().find("input").val();
