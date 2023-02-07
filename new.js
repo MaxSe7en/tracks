@@ -1,8 +1,7 @@
 console.log("hello world");
 
-
 const data = {
-  gameType: "Royal 5"
+  gameType: "Royal 5",
 };
 const showModal = (title, button_type, url, data) => {
   // showModal()
@@ -25,138 +24,329 @@ const showModalTrack = (title, button_type, url, data) => {
 
   myModal.show();
 };
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
-
-$(document).ready(function() {
-  var tooltips = [
-      "Tooltip 1",
-      "Tooltip 2",
-      "Tooltip 3",
-      "Tooltip 4"
-  ];
+$(document).ready(function () {
+  var tooltips = ["Tooltip 1", "Tooltip 2", "Tooltip 3", "Tooltip 4"];
   var currentTip = 0;
-  $("#element").hover(function() {
-      $(this).attr("title", tooltips[currentTip]);
-      currentTip = (currentTip + 1) % tooltips.length;
+  $("#element").hover(function () {
+    $(this).attr("title", tooltips[currentTip]);
+    currentTip = (currentTip + 1) % tooltips.length;
   });
 });
 
-
-const object =[
+let gg = [
   {
-      "trackNo": 1,
-      "betId": "202301310162",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:29:00",
-      "nextDay": false,
-      "current": true
+    trackNo: 1,
+    betId: "202301310162",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
+    current: true,
   },
   {
-      "trackNo": 2,
-      "betId": "202301310163",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:29:00",
-      "nextDay": false
+    trackNo: 2,
+    betId: "202301310163",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
   },
   {
-      "trackNo": 3,
-      "betId": "202301310164",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:34:00",
-      "nextDay": false
+    trackNo: 3,
+    betId: "202301310164",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:34:00",
+    nextDay: false,
   },
   {
-      "trackNo": 4,
-      "betId": "202301310165",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:39:00",
-      "nextDay": false
+    trackNo: 4,
+    betId: "202301310165",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:39:00",
+    nextDay: false,
   },
   {
-      "trackNo": 5,
-      "betId": "202301310166",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:44:00",
-      "nextDay": false
+    trackNo: 5,
+    betId: "202301310166",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:44:00",
+    nextDay: false,
   },
   {
-      "trackNo": 6,
-      "betId": "202301310167",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:49:00",
-      "nextDay": false
+    trackNo: 6,
+    betId: "202301310167",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:49:00",
+    nextDay: false,
   },
   {
-      "trackNo": 7,
-      "betId": "202301310168",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:54:00",
-      "nextDay": false
+    trackNo: 7,
+    betId: "202301310168",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:54:00",
+    nextDay: false,
   },
   {
-      "trackNo": 8,
-      "betId": "202301310169",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 20:59:00",
-      "nextDay": false
+    trackNo: 8,
+    betId: "202301310169",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:59:00",
+    nextDay: false,
   },
   {
-      "trackNo": 9,
-      "betId": "202301310170",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 21:04:00",
-      "nextDay": false
+    trackNo: 9,
+    betId: "202301310170",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:04:00",
+    nextDay: false,
   },
   {
-      "trackNo": 10,
-      "betId": "202301310171",
-      "multiplier": 1,
-      "betAmt": 0.252,
-      "estimatedDrawTime": "2023-01-31 21:09:00",
-      "nextDay": false
-  }
+    trackNo: 10,
+    betId: "202301310171",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:09:00",
+    nextDay: false,
+  },
 ];
+
+const object = [
+  {
+    trackNo: 1,
+    betId: "202301310162",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
+    current: true,
+  },
+  {
+    trackNo: 2,
+    betId: "202301310163",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 3,
+    betId: "202301310164",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:34:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 4,
+    betId: "202301310165",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:39:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 5,
+    betId: "202301310166",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:44:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 6,
+    betId: "202301310167",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:49:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 7,
+    betId: "202301310168",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:54:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 8,
+    betId: "202301310169",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:59:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 9,
+    betId: "202301310170",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:04:00",
+    nextDay: false,
+  },
+  {
+    trackNo: 10,
+    betId: "202301310171",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:09:00",
+    nextDay: false,
+  },
+  {
+    trackInfo: {
+      totalBetAmt: 2.52,
+      totalDraws: 10,
+      allSelections: [
+        [1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3],
+      ],
+      gameId: "12344",
+      stop_if_win: 0,
+      stop_if_not_win: 0,
+    },
+  },
+];
+
 // object[0] = {betname: 1, name: "John Doe" };
 // object[1] = {id: 2, name: "Jane Doe" };
 // object[2] = {id: 3, name: "Jim Doe" };
 // object[3] = {id: 4, name: "Jack Doe" };
 // object[4] = {id: 5, name: "Jill Doe" };
 
+const toDelete = [1, 2, 4];
+const filteredArray = object.filter((item) => !toDelete.includes(item.trackNo));
 
-const toDelete = [1,  2,  4];
-const filteredArray = object.filter(item => !toDelete.includes(item.trackNo));
-
-
-console.log(object);
-console.log(filteredArray);
+// console.log(object);
+// console.log(filteredArray);
 // { 5: { name: "Jill Doe" } }
-
-
 
 const objects = {
   1: { name: "John Doe" },
   2: { name: "Jane Doe" },
   3: { name: "Jim Doe" },
   4: { name: "Jack Doe" },
-  5: { name: "Jill Doe" }
+  5: { name: "Jill Doe" },
+};
+
+const myObj = {
+  0: {
+    trackNo: 1,
+    betId: "202301310162",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
+    current: true,
+  },
+  1: {
+    trackNo: 2,
+    betId: "202301310163",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:29:00",
+    nextDay: false,
+  },
+  2: {
+    trackNo: 3,
+    betId: "202301310164",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:34:00",
+    nextDay: false,
+  },
+  3: {
+    trackNo: 4,
+    betId: "202301310165",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:39:00",
+    nextDay: false,
+  },
+  4: {
+    trackNo: 5,
+    betId: "202301310166",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:44:00",
+    nextDay: false,
+  },
+  5: {
+    trackNo: 6,
+    betId: "202301310167",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:49:00",
+    nextDay: false,
+  },
+  6: {
+    trackNo: 7,
+    betId: "202301310168",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:54:00",
+    nextDay: false,
+  },
+  7: {
+    trackNo: 8,
+    betId: "202301310169",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 20:59:00",
+    nextDay: false,
+  },
+  8: {
+    trackNo: 9,
+    betId: "202301310170",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:04:00",
+    nextDay: false,
+  },
+  9: {
+    trackNo: 10,
+    betId: "202301310171",
+    multiplier: 1,
+    betAmt: 0.252,
+    estimatedDrawTime: "2023-01-31 21:09:00",
+    nextDay: false,
+  },
+  trackInfo: {
+    totalBetAmt: 2.52,
+    totalDraws: 10,
+    allSelections: [
+      [1, 2, 3],
+      [1, 2, 3],
+      [1, 2, 3],
+    ],
+    gameId: "12344",
+    stop_if_win: 0,
+    stop_if_not_win: 0,
+  },
 };
 
 const toDeletes = [1, 2, 3, 4];
 
 for (const id of toDeletes) {
-  delete objects[id];
+  // console.log(myObj[id]);
+  console.log(id);
+
+  delete myObj[id];
 }
 
-// console.log(object);
+console.log(myObj);
 // { 5: { name: "Jill Doe" } }
