@@ -161,9 +161,10 @@
                     name="disable_confirm_bet"
                     id="disable_confirm_bet"
                   />
-                  <label class="col-sm-9" for="disable_confirm_bet">Disable confirm bet (Re-enable in Settings)</label>
+                  <label class="col-sm-9" for="disable_confirm_bet"
+                    >Disable confirm bet (Re-enable in Settings)</label
+                  >
                 </div>
-                
               </div>
             </div>
           </div>
@@ -183,8 +184,25 @@
       </div>
     </div>
 
-
-    <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" data-title="Default tooltip"  >inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a> site or project.
+    <p class="muted">
+      Placeholder text to demonstrate some
+      <a href="#" data-bs-toggle="tooltip" data-title="Default tooltip"
+        >inline links</a
+      >
+      with tooltips. This is now just filler, no killer. Content placed here
+      just to mimic the presence of
+      <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip"
+        >real text</a
+      >. And all that just to give you an idea of how tooltips would look when
+      used in real-world situations. So hopefully you've now seen how
+      <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too"
+        >these tooltips on links</a
+      >
+      can work in practice, once you use them on
+      <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!"
+        >your own</a
+      >
+      site or project.
     </p>
     <div id="element">Hover over me</div>
 
@@ -194,18 +212,18 @@
       <option value="3">Option 3</option>
       <option value="4">Option 4</option>
     </select>
-    
+
     input
     <script src="new.js"></script>
     <script>
       function checkRemainingSelectOptions(attr) {
-        console.log(attr)
-  let selectedIndex = $(attr).prop("selectedIndex");
-  let count = $(`${attr} option:gt("  ${selectedIndex}  ")`).length;
-  console.log(count);
-  return count;
-}
-function check(){
+        console.log(attr);
+        let selectedIndex = $(attr).prop("selectedIndex");
+        let count = $(`${attr} option:gt("  ${selectedIndex}  ")`).length;
+        console.log(count);
+        return count;
+      }
+      function check() {
         var selectedIndex = $("#mySelect").prop("selectedIndex");
         var count = $("#mySelect option:gt(" + selectedIndex + ")").length;
         console.log(count);
